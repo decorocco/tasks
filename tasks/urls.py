@@ -1,7 +1,10 @@
 from django.urls import path
 
-from . import views
+from views import index, listTask,postTask,deleteTask
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', index, name='index'),
+    path('get', listTask, name='getTasks'),
+    path('post',postTask, name='postTask'),
+    path('delete/<int:id>',deleteTask,name='deleteTask')
 ]
