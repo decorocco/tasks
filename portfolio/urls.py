@@ -23,5 +23,5 @@ router.register(r'tasks', TasksViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('tasks/', include('tasks.urls')),
+    path('', include(router.urls)),
 ]
